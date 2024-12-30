@@ -23,6 +23,7 @@ public class UserResource {
         return userDaoService.getUsers();
     }
 
+    //Spring automaticly use gson to convert object to json
     @GetMapping("/users/{id}")
     public User getUser(@PathVariable Integer id) {
         User user = userDaoService.getUser(id);
